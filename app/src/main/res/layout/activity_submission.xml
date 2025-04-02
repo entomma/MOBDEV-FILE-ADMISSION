@@ -9,108 +9,284 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".submission">
+        tools:context=".SubmissionActivity">
 
+        <!-- Title -->
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/titleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:text="Enter your admission information below"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.141"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
+        <!-- Name Section -->
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/nameLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="950dp"
-            android:text="TextView"
-            app:layout_constraintEnd_toEndOf="@+id/textView8"
-            app:layout_constraintHorizontal_bias="0.536"
-            app:layout_constraintStart_toStartOf="@+id/textView8"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="440dp"
-            android:text="TextView"
-            app:layout_constraintEnd_toEndOf="@+id/textView8"
-            app:layout_constraintHorizontal_bias="0.536"
-            app:layout_constraintStart_toStartOf="@+id/textView8"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
             android:text="Name"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/textView8"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/textView8"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/titleText"
+            app:layout_constraintStart_toStartOf="parent" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="357dp"
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="@id/textView8"
-            app:layout_constraintTop_toBottomOf="@id/textView8"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="72dp">
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/getfirstname"
-            android:layout_width="390dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="48dp"
             android:hint="First Name"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="@+id/textView12"
-            app:layout_constraintHorizontal_bias="0.003"
-            app:layout_constraintStart_toStartOf="@+id/textView12"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nameLabel" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/getlastname"
-            android:layout_width="390dp"
-            android:layout_height="52dp"
-            android:layout_marginTop="116dp"
-            android:hint="Last Name"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@+id/textView12"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/getmidname"
-            android:layout_width="390dp"
-            android:layout_height="38dp"
-            android:layout_marginTop="88dp"
+        <EditText
+            android:id="@+id/middleName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:hint="Middle Name"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="@+id/textView12"
-            app:layout_constraintHorizontal_bias="0.003"
-            app:layout_constraintStart_toStartOf="@+id/textView12"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/firstName" />
+
+        <EditText
+            android:id="@+id/lastName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Last Name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/middleName" />
+
+        <!-- Birth Date Section -->
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/birthDateLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
             android:text="Birth Date"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/getlastname"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/getlastname"
-            app:layout_constraintTop_toBottomOf="@+id/getlastname" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/lastName"
+            app:layout_constraintStart_toStartOf="parent" />
 
+        <Spinner
+            android:id="@+id/birthMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/birthDateLabel" />
+
+        <Spinner
+            android:id="@+id/birthDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/birthMonth"
+            app:layout_constraintTop_toTopOf="@id/birthMonth" />
+
+        <Spinner
+            android:id="@+id/birthYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/birthDay"
+            app:layout_constraintTop_toTopOf="@id/birthMonth" />
+
+        <!-- Gender Section -->
+        <RadioGroup
+            android:id="@+id/genderGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/birthMonth"
+            app:layout_constraintStart_toStartOf="parent">
+            <RadioButton
+                android:id="@+id/radioMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male" />
+            <RadioButton
+                android:id="@+id/radioFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female" />
+        </RadioGroup>
+
+        <!-- Contacts Section -->
+        <TextView
+            android:id="@+id/contactsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contacts"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/genderGroup"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contactsLabel" />
+
+        <EditText
+            android:id="@+id/emailAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Email Address"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phoneNumber" />
+
+        <!-- Mailing Address Section -->
+        <TextView
+            android:id="@+id/addressLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mailing Address"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/emailAddress"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/streetAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Street Address"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addressLabel" />
+
+        <EditText
+            android:id="@+id/barangay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Barangay"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/streetAddress" />
+
+        <EditText
+            android:id="@+id/city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="City"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barangay" />
+
+        <EditText
+            android:id="@+id/province"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Province"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/city" />
+
+        <EditText
+            android:id="@+id/zipCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Zip Code"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/province" />
+
+        <!-- Course Preferences Section -->
+        <TextView
+            android:id="@+id/coursePreferencesLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Course Preferences"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/zipCode"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <CheckBox
+            android:id="@+id/course_cs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Computer Science"
+            app:layout_constraintTop_toBottomOf="@id/coursePreferencesLabel" />
+
+        <CheckBox
+            android:id="@+id/course_business_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Business Administration"
+            app:layout_constraintTop_toBottomOf="@id/course_cs" />
+
+        <CheckBox
+            android:id="@+id/course_mechanical_engg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mechanical Engineering"
+            app:layout_constraintTop_toBottomOf="@id/course_business_admin" />
+
+        <CheckBox
+            android:id="@+id/course_electrical_engg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Electrical Engineering"
+            app:layout_constraintTop_toBottomOf="@id/course_mechanical_engg" />
+
+        <CheckBox
+            android:id="@+id/course_civil_engg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Civil Engineering"
+            app:layout_constraintTop_toBottomOf="@id/course_electrical_engg" />
+
+        <CheckBox
+            android:id="@+id/course_medicine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medicine"
+            app:layout_constraintTop_toBottomOf="@id/course_civil_engg" />
+
+        <CheckBox
+            android:id="@+id/course_law"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Law"
+            app:layout_constraintTop_toBottomOf="@id/course_medicine" />
+
+        <CheckBox
+            android:id="@+id/course_psychology"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Psychology"
+            app:layout_constraintTop_toBottomOf="@id/course_law" />
+
+        <CheckBox
+            android:id="@+id/course_arts_humanities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arts and Humanities"
+            app:layout_constraintTop_toBottomOf="@id/course_psychology" />
+
+        <CheckBox
+            android:id="@+id/course_biotechnology"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Biotechnology"
+            app:layout_constraintTop_toBottomOf="@id/course_arts_humanities" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save/Submit"
+            app:layout_constraintTop_toBottomOf="@id/course_biotechnology"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

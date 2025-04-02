@@ -17,7 +17,7 @@
         android:theme="@style/Theme.FormAdmission"
         tools:targetApi="31">
         <activity
-            android:name=".submission"
+            android:name=".SubmissionActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity"/>
         <activity

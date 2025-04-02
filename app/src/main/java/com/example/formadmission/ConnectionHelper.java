@@ -1,30 +1,25 @@
 package com.example.formadmission;
-import android.content.Context;
-import android.util.Log;
-import android.widget.Toast;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 public class ConnectionHelper {
 
-    public Connection connect_to_db(String dbname, String user, String pass) {
-        Connection conn = null;
+    // This method is used to establish a connection to the PostgreSQL database
+    public Connection connect_to_db(String dbName, String user, String password) {
+        Connection connection = null;
         try {
-            // Load PostgreSQL JDBC Driver
+            // Load the PostgreSQL driver
             Class.forName("org.postgresql.Driver");
 
-            // Use 10.0.2.2 for Emulator, replace with server IP for a real device
-            String url = "jdbc:postgresql://192.168.1.2:5432/" + dbname;
-            conn = DriverManager.getConnection(url, user, pass);
+            // Define the connection string (you may need to modify this based on your setup)
+            String connectionUrl = "jdbc:postgresql://192.168.1.2:5432/" + dbName;
 
-            if (conn != null) {
-                Log.i("DB Connection", "Connected Successfully");
-            } else {
-                Log.e("DB Connection", "Connection Failed");
-            }
+            // Establish the connection
+            connection = DriverManager.getConnection(connectionUrl, user, password);
         } catch (Exception e) {
-            Log.e("DB Error", e.getMessage());
+            e.printStackTrace();
         }
-        return conn;
+        return connection;
     }
 }
